@@ -16,17 +16,17 @@ public class Admin2 {
 	FlightRepository flightRepository;
 	
 	
-	@Transactional(propagation = Propagation.SUPPORTS, rollbackFor = Exception.class)
-	public void propogationCheck(boolean value) throws Exception {
-		Flight f1 = new Flight();
-		f1.setUpdates(1);
-		f1.setName("nam new nested 120000");
-		f1.setCity("city");
-		
-		flightRepository.save(f1);
-		if(value) {
-			throw new Exception("This is new");
-		}
-	}
+//	@Transactional(propagation = Propagation.SUPPORTS, rollbackFor = Exception.class)
+//	public void propogationCheck(boolean value) throws Exception {
+//		Flight f1 = new Flight();
+//		f1.setUpdates(1);
+//		f1.setName("nam new nested 120000");
+//		f1.setCity("city");
+//		
+//		flightRepository.save(f1);
+//		if(value) {
+//			throw new Exception("This is new");
+//		}
+//	}
 
 }
